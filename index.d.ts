@@ -3,4 +3,4 @@ export interface npmConfigArgumentsOptions {
   include?: Array<string>
 }
 
-export function assignConfigToArgs(options: npmConfigArgumentsOptions): void;
+export function assignConfigToArgs(options?: npmConfigArgumentsOptions): void;
