@@ -1,0 +1,30 @@
+{
+  "name": "npm-config-arguments",
+  "version": "1.0.0",
+  "description": "Parses npm_config env variables and assigns them to argv - useful for 'npm run' commands",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm run test-cli --myArgument --tag=\"yo\"",
+    "test-cli": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixrieseberg/npm-config-arguments.git"
+  },
+  "keywords": [
+    "npm",
+    "npm_config",
+    "argv",
+    "commander",
+    "yargs",
+    "process.argv"
+  ],
+  "author": "Felix Rieseberg <felix@felixrieseberg.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felixrieseberg/npm-config-arguments/issues"
+  },
+  "homepage": "https://github.com/felixrieseberg/npm-config-arguments#readme"
+}
