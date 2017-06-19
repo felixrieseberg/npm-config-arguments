@@ -1,6 +1,6 @@
 {
   "name": "npm-config-arguments",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Parses npm_config env variables and assigns them to argv - useful for 'npm run' commands",
   "main": "index.js",
   "dependencies": {},
