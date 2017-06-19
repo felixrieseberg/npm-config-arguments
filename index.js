@@ -142,7 +142,7 @@ function assignConfigToArgs(options) {
 
     process.argv.push('--' + name);
 
-    if (!process.env[key] === '') {
+    if (process.env[key] !== '') {
       process.argv.push(process.env[key]);
     }
   });
