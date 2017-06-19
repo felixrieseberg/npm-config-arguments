@@ -140,10 +140,10 @@ function assignConfigToArgs(options) {
 
     if (isArgumentAlreadyPresent(name)) return;
 
-    if (process.env[key] === '') {
-      process.argv.push(name);
-    } else {
-      process.argv.push(name + '=' + process.env[key]);
+    process.argv.push('--' + name);
+
+    if (!process.env[key] === '') {
+      process.argv.push(process.env[key]);
     }
   });
 }
