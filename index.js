@@ -258,7 +258,6 @@ function assignConfigToArgs(options) {
     // Should we transform the underscore?
     if (!options.include.indexOf(name) === -1 && !options.include.indexOf(name.replace('_', '-') > -1)) {
       name = name.replace('_', '-');
-      delete process.env[key];
     }
 
     if (isArgumentAlreadyPresent(name)) return;
