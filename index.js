@@ -256,8 +256,12 @@ function assignConfigToArgs(options) {
     if ((options && options.include.indexOf(name) === -1) && isKnown(key)) return;
 
     // Should we transform the underscore?
-    if (!options.include.indexOf(name) === -1 && !options.include.indexOf(name.replace('_', '-') > -1)) {
-      name = name.replace('_', '-');
+    var replaced = name.replace(/_/g, '-');
+    if (options &&
+      options.include &&
+      options.include.indexOf(name) === -1 &&
+      options.include.indexOf(replaced) > -1) {
+      name = replaced;
     }
 
     if (isArgumentAlreadyPresent(name)) return;

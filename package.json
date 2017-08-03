@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "npm run test-cli --myArgument --tag=\"yo\"",
+    "test": "npm run test-cli --myArgument --tag=\"yo\" --the-argument=\"2\"",
     "test-cli": "node ./test/test.js"
   },
   "repository": {

@@ -8,5 +8,8 @@ assert((process.argv.find((arg) => arg.startsWith('tag'))) === undefined);
 
 // Include test
 assignConfigToArgs({ include: ['tag'] });
-console.log(process.argv)
 assert(!!(process.argv.find((arg) => arg.startsWith('--tag'))));
+
+// Rewrite test
+assignConfigToArgs({ include: ['the-argument'] });
+assert(!!(process.argv.find((arg) => arg.startsWith('--the-argument'))));
