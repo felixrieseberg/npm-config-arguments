@@ -255,6 +255,11 @@ function assignConfigToArgs(options) {
     // Is the var known and also not in the manual include list?
     if ((options && options.include.indexOf(name) === -1) && isKnown(key)) return;
 
+    // Should we transform the underscore?
+    if (!options.include.indexOf(name) === -1 && !options.include.indexOf(name.replace('_', '-') > -1)) {
+      name = name.replace('_', '-');
+    }
+
     if (isArgumentAlreadyPresent(name)) return;
 
     process.argv.push('--' + name);
