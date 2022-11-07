@@ -1,12 +1,12 @@
 {
   "name": "npm-config-arguments",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "Parses npm_config env variables and assigns them to argv - useful for 'npm run' commands",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "npm run test-cli --myArgument --tag=\"yo\" --the-argument=\"2\"",
+    "test": "npm run test-cli --myArgument --tag=\"yo\" --the_argument=\"2\"",
     "test-cli": "node ./test/test.js"
   },
   "repository": {

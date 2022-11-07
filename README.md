@@ -39,5 +39,17 @@ Exclude all known npm config variables expect for the specified one (`npm_config
 assignConfigToArgs({ include: ['tag'] });
 ```
 
+Use alternative format for values in argv: Instead of adding the values for each argument as separate entry after the name of the argument (default behavior), they will be added in the same entry using an equals character.
+
+Default behavior:
+`npm run my-command --myArgument=123` results in `process.argv = [..., '--myArgument', 123]`
+
+With this setting:
+`npm run my-command --myArgument=123` results in `process.argv = [..., '--myArgument=123']`
+
+```
+assignConfigToArgs({ useEqualsForValues: true });
+```
+
 ### License
 MIT, see `LICENSE` for details.
