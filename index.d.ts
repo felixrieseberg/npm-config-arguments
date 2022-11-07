@@ -1,6 +1,7 @@
 export interface npmConfigArgumentsOptions {
   includeAllKnown?: boolean,
-  include?: Array<string>
+  include?: Array<string>,
+  useEqualsForValues?: true
 }
 
 export function assignConfigToArgs(options?: npmConfigArgumentsOptions): void;
